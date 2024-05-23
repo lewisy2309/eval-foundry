@@ -64,7 +64,7 @@ contract SimpleVotingSystemTest is Test {
         vm.startPrank(admin);
         voting.addCandidate("Alice");
         voting.setWorkflowStatus(SimpleVotingSystem.WorkflowStatus.VOTE);
-        vm.warp(block.timestamp + 1 hours); // Simulate passing of 1 hour
+        vm.warp(block.timestamp + 1 hours);
         vm.stopPrank();
 
         vm.startPrank(voter1);
@@ -103,7 +103,7 @@ contract SimpleVotingSystemTest is Test {
         vm.startPrank(admin);
         voting.addCandidate("Alice");
         voting.setWorkflowStatus(SimpleVotingSystem.WorkflowStatus.VOTE);
-        vm.warp(block.timestamp + 1 hours); // Simulate passing of 1 hour
+        vm.warp(block.timestamp + 1 hours); 
         vm.stopPrank();
 
         vm.startPrank(voter1);
@@ -143,7 +143,7 @@ contract SimpleVotingSystemTest is Test {
         vm.startPrank(admin);
         voting.addCandidate("Alice");
         voting.setWorkflowStatus(SimpleVotingSystem.WorkflowStatus.VOTE);
-        vm.warp(block.timestamp + 1 hours); // Simulate passing of 1 hour
+        vm.warp(block.timestamp + 1 hours); 
         vm.stopPrank();
 
         vm.startPrank(voter1);
@@ -182,16 +182,16 @@ contract SimpleVotingSystemTest is Test {
         voting.addCandidate("Alice");
         voting.addCandidate("Bob");
         voting.setWorkflowStatus(SimpleVotingSystem.WorkflowStatus.VOTE);
-        vm.warp(block.timestamp + 1 hours); // Simulate passing of 1 hour
+        vm.warp(block.timestamp + 1 hours); 
         vm.stopPrank();
 
         vm.startPrank(voter1);
         voting.vote(1);
-        voting.vote(1); // Voting for Alice twice
+        voting.vote(1); 
         vm.stopPrank();
 
         vm.startPrank(voter2);
-        voting.vote(2); // Voting for Bob
+        voting.vote(2);
         vm.stopPrank();
 
         vm.startPrank(admin);
@@ -211,11 +211,11 @@ contract SimpleVotingSystemTest is Test {
 
         vm.startPrank(voter1);
         voting.vote(1);
-        voting.vote(1); // Voting for Alice twice
+        voting.vote(1); 
         vm.stopPrank();
 
         vm.startPrank(voter2);
-        voting.vote(2); // Voting for Bob
+        voting.vote(2);
         vm.stopPrank();
 
         vm.startPrank(admin);
